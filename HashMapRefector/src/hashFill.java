@@ -89,13 +89,13 @@ public class hashFill {
 	/**
 	 * @param listSize
 	 * @return
+     * This is a new Comment
 	 */
 	public double getLoadFactor(int listSize)
 	{
-		double value1 = listSize;
+		double value = listSize;
 		double value2 =hashTable.length;
-		loadFactor = value1/value2;
-
+		loadFactor = value/value2;
 		return loadFactor;
 	}
 	
