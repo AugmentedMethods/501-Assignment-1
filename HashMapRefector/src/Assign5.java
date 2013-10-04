@@ -10,24 +10,26 @@ import java.io.PrintWriter;
 
 public class Assign5 {
 
-	private int listSize = 0;
-	private hashFill hashTable = new hashFill();
+	private int stringsInFile = 0;
+	private HashFill hashTable = new HashFill();
 	private hashObject newEntry;
 	
 	public static void main(String args[]) throws IOException
 	{
-		if(args.length!=1)
-		{
-			System.out.println("Failed need a file");
-		}
         Assign5 testCase = new Assign5();
+
         testCase.linesInFile("input.txt");
-        testCase.hashTable.generateTable(testCase.getListSize());
+        testCase.hashTable.generateTable();
         testCase.fileReader("input.txt");
-        System.out.println("Load Factor: "+(testCase.hashTable.getLoadFactor(testCase.getListSize())*100));
-        testCase.fileSearch("input.txt");
-        System.out.println("Efficiency: "+(testCase.hashTable.hashEfficiency(testCase.getListSize())*100));
-        System.out.println("Longest Chain: "+testCase.hashTable.getLongestChain());
+
+        HashEvaluation hashTableToEvaluate= new HashEvaluation(testCase.hashTable);
+        double loadFactor =  hashTableToEvaluate.getLoadFactor(testCase.getListSize());
+        System.out.println("Load Factor: "+(loadFactor*100));
+
+        testCase.fileSearch("input.txt", hashTableToEvaluate);
+        System.out.println("Efficiency: "+(hashTableToEvaluate.hashEfficiency(loadFactor, testCase.getListSize())*100));
+
+        System.out.println("Longest Chain: "+hashTableToEvaluate.getLongestChain());
         testCase.fileMaker("input.txt");
 
 	}
@@ -39,28 +41,28 @@ public class Assign5 {
 	private String linesInFile(String fileName)
 	{
 		try{
-			  // Open the file that is the first 
+			  // Open the file that is the first
 			  // command line parameter
 			  FileInputStream fstream = new FileInputStream(fileName);
 			  // Get the object of DataInputStream
 			  DataInputStream in = new DataInputStream(fstream);
 			  BufferedReader br = new BufferedReader(new InputStreamReader(in));
 			  String tempString = new String();
-			
-			  
+
+
 			  while((tempString = br.readLine())!= null)
 			  {
-				  listSize++;
+				  stringsInFile++;
 			  }
 			in.close();
 			  //Close the input stream
-			
+
 			    }catch (Exception e){//Catch exception if any
 			  System.err.println("Could not find the file, try again: " + e.getMessage());
 			  return "failed";
 			  }
-	//	System.out.println(listSize);
-		return "";	
+	//	System.out.println(stringsInFile);
+		return "";
 	}
 
 	/**
@@ -84,7 +86,7 @@ public class Assign5 {
 			  {
 				 hashTable.hashFunction(tempString);
 				 newEntry = new hashObject(tempString,hashTable.hashFunction(tempString));
-				 hashTable.fillTable(newEntry,listSize);
+				 hashTable.fillTable(newEntry);
 			  }
 			in.close();
 			  //Close the input stream
@@ -101,7 +103,7 @@ public class Assign5 {
 	 * @param fileName
 	 * @return
 	 */
-	private String fileSearch(String fileName)
+	private String fileSearch(String fileName, HashEvaluation hashTableToEvaluate)
 	{
 		try{
 			  // Open the file that is the first 
@@ -117,7 +119,7 @@ public class Assign5 {
 			  {
 				 hashTable.hashFunction(tempString);
 				 newEntry = new hashObject(tempString,hashTable.hashFunction(tempString));
-				 hashTable.searchLength(newEntry,listSize);
+                 hashTableToEvaluate.searchLength(newEntry,stringsInFile);
 			  }
 			in.close();
 			  //Close the input stream
@@ -126,7 +128,7 @@ public class Assign5 {
 			  System.err.println("Could not find the file, try again: " + e.getMessage());
 			  return "failed";
 			  }
-		//System.out.println(listSize);
+		//System.out.println(stringsInFile);
 		return "";	
 	}
 
@@ -158,6 +160,6 @@ public class Assign5 {
 		
 	public int getListSize()
 	{
-		return listSize;
+		return stringsInFile;
 	}
 }
