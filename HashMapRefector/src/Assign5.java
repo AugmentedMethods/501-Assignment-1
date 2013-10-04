@@ -20,15 +20,15 @@ public class Assign5 {
 		{
 			System.out.println("Failed need a file");
 		}
-	Assign5 testCase = new Assign5();
-	testCase.linesInFile("input.txt");
-	testCase.hashTable.generateTable(testCase.getListSize());
-	testCase.fileReader("input.txt");
-	System.out.println("Load Factor: "+(testCase.hashTable.getLoadFactor(testCase.getListSize())*100));
-	testCase.fileSearch("input.txt");
-	System.out.println("Efficiency: "+(testCase.hashTable.hashEfficiency(testCase.getListSize())*100));
-	System.out.println("Longest Chain: "+testCase.hashTable.getLongestChain());
-	testCase.fileMaker("input.txt");
+        Assign5 testCase = new Assign5();
+        testCase.linesInFile("input.txt");
+        testCase.hashTable.generateTable(testCase.getListSize());
+        testCase.fileReader("input.txt");
+        System.out.println("Load Factor: "+(testCase.hashTable.getLoadFactor(testCase.getListSize())*100));
+        testCase.fileSearch("input.txt");
+        System.out.println("Efficiency: "+(testCase.hashTable.hashEfficiency(testCase.getListSize())*100));
+        System.out.println("Longest Chain: "+testCase.hashTable.getLongestChain());
+        testCase.fileMaker("input.txt");
 
 	}
 	/**
@@ -82,8 +82,8 @@ public class Assign5 {
 			  //A hash object is used to store both the tag and the word
 			  while((tempString = br.readLine())!= null)
 			  {
-				 hashTable.hashFunction(tempString, listSize);
-				 newEntry = new hashObject(tempString,hashTable.hashFunction(tempString, listSize));
+				 hashTable.hashFunction(tempString);
+				 newEntry = new hashObject(tempString,hashTable.hashFunction(tempString));
 				 hashTable.fillTable(newEntry,listSize);
 			  }
 			in.close();
@@ -115,8 +115,8 @@ public class Assign5 {
 			  
 			  while((tempString = br.readLine())!= null)
 			  {
-				 hashTable.hashFunction(tempString, listSize);
-				 newEntry = new hashObject(tempString,hashTable.hashFunction(tempString, listSize));
+				 hashTable.hashFunction(tempString);
+				 newEntry = new hashObject(tempString,hashTable.hashFunction(tempString));
 				 hashTable.searchLength(newEntry,listSize);
 			  }
 			in.close();

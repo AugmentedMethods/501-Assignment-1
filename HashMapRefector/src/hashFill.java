@@ -7,6 +7,7 @@ public class hashFill {
 	private double averageSearch=0;
 	private int currentLength=0;
 	private double hashEfficency =0;
+    private int hashTableSize = 15077;
 	
 	/**
 	 * sets the size of the table
@@ -16,30 +17,17 @@ public class hashFill {
 	 */
 	public void generateTable(int listSize)
 	{
-		hashTable = new hashObject[(int) (15077)];//A prime number was chosen such that the load factor would be acceptable and the efficency 
-		//would be within a desired range 
+		hashTable = new hashObject[(int) (hashTableSize)];
 	}
 	/**
-	 * Has function, is describe in great detail in the paper copy
+	 * Refactored, made the hash function a class
 	 * @param word
-	 * @param listSize
+	 * @param 
 	 * @return
 	 */
-	public int hashFunction(String word,int listSize)
+	public int hashFunction(String word)
 	{
-  
-	    int hash = 15077;
-		//basic idea is to read each character and perform a couple logical operations on each character  
-	    for (int i =0; i < word.length(); i++) {
-	    	if(word.charAt(i)>='a' && word.charAt(i)<='z')
-	    		hash = 37 * hash + word.charAt(i);
-	    	
-	    	hash = 37 ^ hash + word.charAt(i)/79;
-	    	hash = ((hash << 5) + hash) + word.charAt(i); 
-	      
-	    }
-	    //modulos is used to ensure that the hash is within the correct range
-	    return Math.abs(hash)%hashTable.length;
+        return HashFunction.calculateHashValue(word) % hashTable.length;
 	}
 	/**
 	 * adds the new entry to the table depending on the hash tag
@@ -51,13 +39,11 @@ public class hashFill {
 	public void fillTable(hashObject newEntry,int listSize)
 	{
 		if(hashTable[newEntry.getTag()]==null)
-		{
 			hashTable[newEntry.getTag()]=newEntry;
-		}
-		else if(hashTable[newEntry.getTag()]!=null)
-		{
+
+		else
 			linearParse(newEntry,listSize);
-		}
+
 	}
 	/**
 	 * method to check one spot at a time until and open spot is found
@@ -74,8 +60,6 @@ public class hashFill {
 				return;
 			}
 		}
-
-
 		for(int counter =0; counter<newEntry.getTag();counter++){
 			if(hashTable[counter]==null)
 			{
