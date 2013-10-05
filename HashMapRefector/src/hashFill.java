@@ -44,11 +44,11 @@ public class HashFill {
 	 */
 	private void linearParse(HashObject newEntry) {
 
-		for(int counter =1; counter+newEntry.getHashTag()<hashTable.length;counter++)
+		for(int counter =newEntry.getHashTag()+1; counter<hashTable.length;counter++)
 		{
-			if(hashTable[newEntry.getHashTag()+counter]==null)
+			if(hashTable[counter]==null)
 			{
-				hashTable[newEntry.getHashTag()+counter]=newEntry;
+				hashTable[counter]=newEntry;
 				return;
 			}
 		}
@@ -59,7 +59,6 @@ public class HashFill {
 				return;
 			}
 		}
-		
 	}
 
 	public HashObject[] getTable()
