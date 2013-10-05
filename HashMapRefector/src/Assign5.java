@@ -80,7 +80,7 @@ public class Assign5 {
 			  DataInputStream in = new DataInputStream(fstream);
 			  BufferedReader br = new BufferedReader(new InputStreamReader(in));
 			  String tempString = new String();
-			
+
 			  //A hash object is used to store both the tag and the word
 			  while((tempString = br.readLine())!= null)
 			  {
@@ -114,7 +114,7 @@ public class Assign5 {
 			  BufferedReader br = new BufferedReader(new InputStreamReader(in));
 			  String tempString = new String();
 			
-			  
+
 			  while((tempString = br.readLine())!= null)
 			  {
 				 hashTable.hashFunction(tempString);

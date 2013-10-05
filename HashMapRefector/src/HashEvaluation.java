@@ -11,6 +11,7 @@ public class HashEvaluation {
     private int totalNumberOfSearches;
     private int hashTableSize;
 
+    private HashObject currentHashObj;
     private int longestChain;
 
     public HashEvaluation(HashFill hashObj)
@@ -29,26 +30,21 @@ public class HashEvaluation {
         return (double)stringsInFile/hashTable.length;
     }
 
-    /**
-     *
-     * @param hashToFind
-     * @param listSize
-     */
     public void searchLength(HashObject hashToFind, int listSize)
     {
         int currentLength=1;
-        HashObject currentHashObj = hashTable[hashToFind.getHashTag()];
+        currentHashObj = hashTable[hashToFind.getHashTag()];
 
-        currentLength = middleDownSearch(hashTable[hashToFind.getHashTag()], hashToFind, currentLength);
-
+        currentLength = middleDownSearch(hashToFind, currentLength);
         //check the end of the array
         int outLimitCheck = currentLength+1+hashToFind.getHashTag();
 
         if(outLimitCheck == hashTable.length  &&  !currentHashObj.getWord().equals(hashToFind.getWord()))
         {
             //loop from start to middle
-            currentLength = topToMiddleSearch(hashTable[hashToFind.getHashTag()], hashToFind, currentLength);
+            currentLength = topToMiddleSearch(hashToFind, currentLength);
         }
+
         //add to the average for a true average can be taken at the end
         totalNumberOfSearches+=currentLength;
 
@@ -57,7 +53,7 @@ public class HashEvaluation {
             longestChain = currentLength;
     }
 
-    int middleDownSearch(HashObject currentHashObj, HashObject hashToFind, int currentLength)
+    int middleDownSearch(HashObject hashToFind, int currentLength)
     {
         //keeps moving until the desired location is found
         while(!currentHashObj.getWord().equals(hashToFind.getWord())&& hashToFind.getHashTag()+currentLength<hashTable.length)
@@ -68,7 +64,7 @@ public class HashEvaluation {
         return currentLength;
     }
 
-    int topToMiddleSearch(HashObject currentHashObj, HashObject hashToFind, int currentLength)
+    int topToMiddleSearch(HashObject hashToFind, int currentLength)
     {
         int counter= 0;
         String wordToFind = hashToFind.getWord();
@@ -80,6 +76,8 @@ public class HashEvaluation {
         }
         return currentLength;
     }
+
+
     /**
      * Hash efficiency calculator
      * @return
@@ -92,7 +90,6 @@ public class HashEvaluation {
     }
 
     public int getLongestChain() {
-
         return longestChain;
     }
 
