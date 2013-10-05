@@ -10,12 +10,13 @@
     </list>
     <ignored path="HashMapRefector.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="15d75038-2575-4a55-a02a-06047b5cc0f5" time="1380938516344" ignored="false" />
+    <file path="/Dummy.txt" changelist="15d75038-2575-4a55-a02a-06047b5cc0f5" time="1380938742622" ignored="false" />
     <file path="/hashFill.java" changelist="15d75038-2575-4a55-a02a-06047b5cc0f5" time="1380925861639" ignored="false" />
     <file path="/HashFunction.java" changelist="15d75038-2575-4a55-a02a-06047b5cc0f5" time="1380872245063" ignored="false" />
     <file path="/Assign5.java" changelist="15d75038-2575-4a55-a02a-06047b5cc0f5" time="1380925257624" ignored="false" />
-    <file path="/HashEvaluation.java" changelist="15d75038-2575-4a55-a02a-06047b5cc0f5" time="1380926125984" ignored="false" />
+    <file path="/HashEvaluation.java" changelist="15d75038-2575-4a55-a02a-06047b5cc0f5" time="1380940359665" ignored="false" />
     <file path="$PROJECT_DIR$/../../HashMapRefector/src/hashFill.java" changelist="15d75038-2575-4a55-a02a-06047b5cc0f5" time="1380925919745" ignored="false" />
+    <file path="/HashObject.java" changelist="15d75038-2575-4a55-a02a-06047b5cc0f5" time="1380938861922" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +80,7 @@
       <file leaf-file-name="Assign5.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Assign5.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="121" column="17" selection-start="3768" selection-end="3768" vertical-scroll-proportion="0.0">
+            <state line="121" column="55" selection-start="3775" selection-end="3806" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -88,7 +89,7 @@
       <file leaf-file-name="HashFill.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/HashFill.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="0" selection-start="1126" selection-end="1126" vertical-scroll-proportion="0.0">
+            <state line="12" column="19" selection-start="295" selection-end="295" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -106,7 +107,20 @@
       <file leaf-file-name="HashEvaluation.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/HashEvaluation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="5" selection-start="503" selection-end="503" vertical-scroll-proportion="0.22544643">
+            <state line="37" column="4" selection-start="825" selection-end="825" vertical-scroll-proportion="0.72922254">
+              <folding>
+                <element signature="method#searchLength#0;class#HashEvaluation#0" expanded="false" />
+                <element signature="method#middleDownSearch#0;class#HashEvaluation#0" expanded="false" />
+                <element signature="method#topToMiddleSearch#0;class#HashEvaluation#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HashObject.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/HashObject.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="28" selection-start="282" selection-end="282" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -135,6 +149,7 @@
         <option value="$PROJECT_DIR$/src/hashFill.java" />
         <option value="$PROJECT_DIR$/src/HashFill.java" />
         <option value="$PROJECT_DIR$/src/Assign5.java" />
+        <option value="$PROJECT_DIR$/src/HashObject.java" />
         <option value="$PROJECT_DIR$/src/HashEvaluation.java" />
       </list>
     </option>
@@ -353,7 +368,11 @@
       <created>1380926661284</created>
       <updated>1380926661284</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Changed class name to match with standard java naming convention">
+      <created>1380938747662</created>
+      <updated>1380938747662</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -370,19 +389,19 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32934782" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32934782" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24949698" sideWeight="0.7336956" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26630434" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24949698" sideWeight="0.83913046" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16086957" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32934782" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32934782" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -429,7 +448,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Second and third refactor, created a separate class of the evaluation and re named several variables so that the class would be more readable" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed class name to match with standard java naming convention" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -447,6 +466,7 @@
     <MESSAGE value="Test" />
     <MESSAGE value="First refactor done, made a separate class for the hash calculation." />
     <MESSAGE value="Second and third refactor, created a separate class of the evaluation and re named several variables so that the class would be more readable" />
+    <MESSAGE value="Changed class name to match with standard java naming convention" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -517,13 +537,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HashObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="22" selection-start="196" selection-end="196" vertical-scroll-proportion="0.39291218">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/outFile.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="32" selection-start="2029" selection-end="2029" vertical-scroll-proportion="0.5762712" />
@@ -536,7 +549,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/HashFill.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="0" selection-start="1126" selection-end="1126" vertical-scroll-proportion="0.0">
+        <state line="12" column="19" selection-start="295" selection-end="295" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HashObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="28" selection-start="282" selection-end="282" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Assign5.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="121" column="55" selection-start="3775" selection-end="3806" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -548,17 +575,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Assign5.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="121" column="17" selection-start="3768" selection-end="3768" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/HashEvaluation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="5" selection-start="503" selection-end="503" vertical-scroll-proportion="0.22544643">
-          <folding />
+        <state line="37" column="4" selection-start="825" selection-end="825" vertical-scroll-proportion="0.72922254">
+          <folding>
+            <element signature="method#searchLength#0;class#HashEvaluation#0" expanded="false" />
+            <element signature="method#middleDownSearch#0;class#HashEvaluation#0" expanded="false" />
+            <element signature="method#topToMiddleSearch#0;class#HashEvaluation#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

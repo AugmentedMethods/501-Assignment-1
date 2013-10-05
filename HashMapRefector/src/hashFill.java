@@ -32,8 +32,8 @@ public class HashFill {
 	 */
 	public void fillTable(HashObject newEntry)
 	{
-		if(hashTable[newEntry.getTag()]==null)
-			hashTable[newEntry.getTag()]=newEntry;
+		if(hashTable[newEntry.getHashTag()]==null)
+			hashTable[newEntry.getHashTag()]=newEntry;
 		else
 			linearParse(newEntry);
 	}
@@ -44,15 +44,15 @@ public class HashFill {
 	 */
 	private void linearParse(HashObject newEntry) {
 
-		for(int counter =1; counter+newEntry.getTag()<hashTable.length;counter++)
+		for(int counter =1; counter+newEntry.getHashTag()<hashTable.length;counter++)
 		{
-			if(hashTable[newEntry.getTag()+counter]==null)
+			if(hashTable[newEntry.getHashTag()+counter]==null)
 			{
-				hashTable[newEntry.getTag()+counter]=newEntry;
+				hashTable[newEntry.getHashTag()+counter]=newEntry;
 				return;
 			}
 		}
-		for(int counter =0; counter<newEntry.getTag();counter++){
+		for(int counter =0; counter<newEntry.getHashTag();counter++){
 			if(hashTable[counter]==null)
 			{
 				hashTable[counter]=newEntry;

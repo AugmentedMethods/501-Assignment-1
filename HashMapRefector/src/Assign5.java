@@ -144,7 +144,7 @@ public class Assign5 {
     		{
     			if(tempTable[i]!=null){
     				temp = tempTable[i];
-    				outputStream1.println("Word: "+temp.getWord()+", its hash tag: "+temp.getTag()+", its location in the table: "+i+", and its element number: "+secondCounter);
+    				outputStream1.println("Word: "+temp.getWord()+", its hash tag: "+temp.getHashTag()+", its location in the table: "+i+", and its element number: "+secondCounter);
     				secondCounter++;
    
     			}

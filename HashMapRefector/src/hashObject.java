@@ -20,12 +20,12 @@ public class HashObject {
 		word = wor;
 	}
 	
-	public int getTag()
+	public int getHashTag()
 	{
 		return hashTag;
 	}
 	
-	public void setTag(int tag)
+	public void setHashTag(int tag)
 	{
 		hashTag = tag;
 	}
