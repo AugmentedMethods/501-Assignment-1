@@ -1,7 +1,7 @@
 
 public class HashFill {
 
-	private hashObject[] hashTable;
+	private HashObject[] hashTable;
     private int longestChain;
     private int hashTableSize = 15077;
 
@@ -12,7 +12,7 @@ public class HashFill {
 	 */
 	public void generateTable()
 	{
-		hashTable = new hashObject[(int) (hashTableSize)];
+		hashTable = new HashObject[(int) (hashTableSize)];
 	}
 	/**
 	 * Refactored, made the hash function a class
@@ -30,7 +30,7 @@ public class HashFill {
 	 * Perform linear Parse
 	 * @param newEntry
 	 */
-	public void fillTable(hashObject newEntry)
+	public void fillTable(HashObject newEntry)
 	{
 		if(hashTable[newEntry.getTag()]==null)
 			hashTable[newEntry.getTag()]=newEntry;
@@ -42,7 +42,7 @@ public class HashFill {
 	 * the method will loop from the bottom to the top
 	 * @param newEntry
 	 */
-	private void linearParse(hashObject newEntry) {
+	private void linearParse(HashObject newEntry) {
 
 		for(int counter =1; counter+newEntry.getTag()<hashTable.length;counter++)
 		{
@@ -62,7 +62,7 @@ public class HashFill {
 		
 	}
 
-	public hashObject[] getTable()
+	public HashObject[] getTable()
 	{
 		return hashTable;
 	}

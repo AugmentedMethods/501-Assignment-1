@@ -1,10 +1,10 @@
 
-public class hashObject {
+public class HashObject {
 
 	private String word;
 	private int hashTag;
 	
-	public hashObject(String wor,int tag)
+	public HashObject(String wor, int tag)
 	{
 		word = wor;
 		hashTag = tag;

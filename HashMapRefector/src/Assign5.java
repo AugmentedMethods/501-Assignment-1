@@ -12,7 +12,7 @@ public class Assign5 {
 
 	private int stringsInFile = 0;
 	private HashFill hashTable = new HashFill();
-	private hashObject newEntry;
+	private HashObject newEntry;
 	
 	public static void main(String args[]) throws IOException
 	{
@@ -85,7 +85,7 @@ public class Assign5 {
 			  while((tempString = br.readLine())!= null)
 			  {
 				 hashTable.hashFunction(tempString);
-				 newEntry = new hashObject(tempString,hashTable.hashFunction(tempString));
+				 newEntry = new HashObject(tempString,hashTable.hashFunction(tempString));
 				 hashTable.fillTable(newEntry);
 			  }
 			in.close();
@@ -118,7 +118,7 @@ public class Assign5 {
 			  while((tempString = br.readLine())!= null)
 			  {
 				 hashTable.hashFunction(tempString);
-				 newEntry = new hashObject(tempString,hashTable.hashFunction(tempString));
+				 newEntry = new HashObject(tempString,hashTable.hashFunction(tempString));
                  hashTableToEvaluate.searchLength(newEntry,stringsInFile);
 			  }
 			in.close();
@@ -134,12 +134,12 @@ public class Assign5 {
 
 	private void fileMaker(String fileName) throws IOException
 	{
-		hashObject[] tempTable = hashTable.getTable();
+		HashObject[] tempTable = hashTable.getTable();
 		PrintWriter outputStream1 = null;
 		int secondCounter =0;
         try {
             outputStream1 = new PrintWriter(new FileWriter("outFile.txt"));   
-            hashObject temp;
+            HashObject temp;
     		for(int i=0; i<tempTable.length;i++)
     		{
     			if(tempTable[i]!=null){

@@ -7,7 +7,7 @@
  */
 public class HashEvaluation {
 
-    private hashObject[] hashTable;
+    private HashObject[] hashTable;
     private int totalNumberOfSearches;
     private int hashTableSize;
 
@@ -34,10 +34,10 @@ public class HashEvaluation {
      * @param wordToFind
      * @param listSize
      */
-    public void searchLength(hashObject wordToFind, int listSize)
+    public void searchLength(HashObject wordToFind, int listSize)
     {
         int currentLength=0;
-        hashObject temp;
+        HashObject temp;
         currentLength=1;
         int counter2=0;
         temp = hashTable[wordToFind.getTag()];
