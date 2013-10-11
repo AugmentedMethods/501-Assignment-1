@@ -22,7 +22,4 @@ public class HashFunction {
         }
         return Math.abs(hash);
     }
-
-
-
 }

@@ -2,7 +2,6 @@
 public class HashFill {
 
 	private HashObject[] hashTable;
-    private int longestChain;
     private int hashTableSize = 15077;
 
 	/**

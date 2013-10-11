@@ -40,13 +40,10 @@ public class HashEvaluation {
         int outLimitCheck = currentLength+1+hashToFind.getHashTag();
 
         if(outLimitCheck == hashTable.length  &&  !currentHashObj.getWord().equals(hashToFind.getWord()))
-        {
-            //loop from start to middle
             currentLength = topToMiddleSearch(hashToFind, currentLength);
-        }
 
         //add to the average for a true average can be taken at the end
-        totalNumberOfSearches+=currentLength;
+        totalNumberOfSearches +=currentLength;
 
         //swap if old lowest if smaller
         if(currentLength>longestChain)
